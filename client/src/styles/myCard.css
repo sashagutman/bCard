@@ -1,0 +1,101 @@
+.mycard-inner{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mycard-title{
+    margin-top: 30px;
+}
+
+.mycard-link{
+    display: block;
+}
+
+.mycard-text{
+    font-size: clamp(1.25rem, 1.154rem + 0.43vw, 1.5rem);
+}
+
+.cards-btn{
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+    position: relative;
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+    overflow: hidden;
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(10px);
+    color: #fff;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(119px);
+    height: 100%;
+    width: 39px;
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .add-icon{
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+  
+  .button:hover {
+    background: #34974d;
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 168px;
+    transform: translateX(0);
+
+  }
+  
+  .button:active .button__icon {
+    background-color: #2e8644;
+  }
+  
+  .button:active {
+    border: 1px solid #2e8644;
+  }
+
+  .cards-btn{
+    display: flex;
+  }
+
+  .mycard-btn{
+    background-color: transparent;
+    font-size: 22px;
+    transition: ease 0.2s;
+  }
+
+  .delete-button:hover{
+    color: #f59e0b;
+  }
+
+  .edit-button:hover{
+    color: #3aa856;
+  }

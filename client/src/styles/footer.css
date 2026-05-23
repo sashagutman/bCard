@@ -1,0 +1,23 @@
+.footer{
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    font-size: 20px;
+}
+
+.footer-list{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-link{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2px;
+    font-size: 16px;
+}
+
+.footer-link:hover{
+    color: #0099ff;
+}

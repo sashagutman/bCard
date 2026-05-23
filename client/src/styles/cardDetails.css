@@ -1,0 +1,137 @@
+.details-title, .details-subtitle{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card-details {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    word-break: break-word;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.details-img{
+    display: grid;
+    margin: 0 0 20px 0;
+}
+
+.details-img img{
+    max-width: 400px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto;   
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.details-contacts{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.contacts-body_title{
+    width: 100px;
+    color: rgb(0, 123, 255);
+}
+
+.contacts-body{
+    display: flex;
+    gap: 15px;
+}
+
+.linkEffect {
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.contacts-body_link:hover{
+    color: rgb(17, 116, 157);
+}
+
+.linkEffect--rightToLeft::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -1px;
+    right: 100%;
+    background-color: rgb(17, 116, 157);
+    transition: width 0.6s ease, right 0.6s ease;
+}
+
+.linkEffect--rightToLeft:hover::after {
+    width: 100%;
+    right: 0;
+}
+
+.custom-button {
+    background-color: white;
+    box-shadow: 0px 2px 5px black;
+    text-align: center;
+    width: 140px;
+    height: 40px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    overflow: hidden;
+  }
+  
+  .custom-button-progress {
+    background-color: #4caf50;
+    border-radius: 12px;
+    height: 32px;
+    width: 20%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: grid;
+    place-content: center;
+    transition: width 0.5s ease-in-out;
+    z-index: 10;
+  }
+  
+  .custom-button:hover .custom-button-progress {
+    width: 130px; 
+  }
+  
+  .custom-button-text {
+    position: relative;
+    left: 8px;
+    font-size: 14px;
+    color: black;
+    z-index: 5;
+  }
+
+  @media (max-width: 550px) {
+    .custom-button{
+        display: none;
+    }
+    .details-img img{
+       height: 200px;
+    }
+}
+
+@media (max-width: 490px) {
+    .details-contacts {
+        font-size: 16px;
+  }
+
+  .contacts-body{
+    flex-direction: column;
+  }
+  }

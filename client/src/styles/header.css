@@ -1,0 +1,300 @@
+.header {
+    background-color: rgb(248, 249, 250);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(0.625rem, 0.375rem + 1vw, 1.25rem);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: transparent;
+    background-image: linear-gradient(to right, #ff6347, #5c62ec);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: background-position 0.5s ease;
+    background-position: -100% 0;
+    background-size: 200% 100%;
+}
+
+.logo:hover {
+    background-position: 100% 0;
+}
+
+.logo-short{
+    display: none;
+}
+
+.menu {
+    margin-right: auto;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.625rem, -0.375rem + 2vw, 1.25rem);
+}
+
+.menu-link {
+    color: #343a40;
+    font-size: 14px;
+    transition: transform 0.3s, color 0.3s;
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-link:hover {
+    color: #007bff;
+    transform:rotate(2deg);
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.auth-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.auth-buttons a {
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.menu-item_search {
+    display: none;
+}
+
+.profile-body{
+    height: 40px;
+}
+
+.underline {
+    position: relative;
+}
+
+.underline::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-login.underline::before {
+    background-color: rgb(0, 123, 255)
+}
+
+.btn-register.underline::before {
+    background-color: rgb(27, 186, 178);
+}
+
+.underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+.search-form {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 17px;
+    max-width: 120px;
+    border-radius: 5px;
+}
+
+.search-button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.menu-button {
+    display: none;
+    font-size: 24px;
+    background-color: #ffffff;
+    color: #0056b3;
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    transition: all 0.6s;
+}
+
+.menu-button:hover {
+    transform: scale(0.9);
+}
+
+.menu-open .menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ecf3f9;
+    z-index: 99;
+    padding: 40px 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.7s ease forwards;
+}
+
+.search-item {
+    display: none;
+}
+
+@media (max-width: 905px) {
+    .menu-button {
+        display: block;
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    .search-input {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 625px) {
+
+    .menu-button {
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 605px) {
+    .search-body {
+        display: none;
+    }
+
+    .search-item {
+        display: block;
+    }
+
+    .logo{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 390px){
+    .logo-short{
+        display: block;
+    }
+
+    .logo-full{
+        display: none;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}  
+
+/* logout btn */
+.logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(255, 65, 65);
+  }
+  
+  /* plus sign */
+  .logout-btn_sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logout-btn_sign svg {
+    width: 17px;
+  }
+  
+  .logout-btn_sign svg path {
+    fill: white;
+  }
+  /* text */
+  .logout-btn_text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .logout-btn:hover {
+    width: 100px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+  .logout-btn:hover .logout-btn_sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+  .logout-btn:hover .logout-btn_text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+  /* button click effect*/
+  .logout-btn:active {
+    transform: translate(2px ,2px);
+  }
